@@ -38,7 +38,7 @@ async def pm_next_page(bot, query):
         offset = 0
     search = PM_BUTTONS.get(key)
     if not search:
-        await query.answer("You are using one of my old messages, please send the request again.", show_alert=True)
+        await query.answer("You are using one of my old messages, please send the request again.", show_alert=False)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
